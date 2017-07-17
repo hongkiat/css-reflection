@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>CSS Image Reflection Effects - Hongkiat.com</title>
+
+<!--  jquery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../_nav/js/jquery.js"><\/script>')</script>
+
+<!-- demo scripts -->
+<link rel="stylesheet" href="normalize.css">
+<link rel="stylesheet" href="style.css">
+
+<!-- nav script -->
+<script src="../_nav/js/nav.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<!-- nav meta -->
+<div class="demo-meta">
+  <h1 class="demo-title">CSS Image Reflection Effects</h1>
+  <p class="demo-desc">No extra images, no JavaScript. This demo shows how to reflect HTML elements only with CSS.</p>
+</div>
+
+<!-- demo content -->
+<div class="demo-wrapper">
+<!-- <h1>Reflection Effect with CSS - Demo</h1> -->
+<section id="basic">
+<div class="reflect below">
+<h3>Reflect image below</h3>
+<img src="images/eight_weeks_of_bruce.large.jpg">
+</div>
+<pre>
+img {
+	-webkit-box-reflect: below;
+}
+</pre>
+<div class="reflect offset">
+<h3>Reflection offset</h3>
+<img src="images/gabriel_garcia_marquez.large.jpg">
+</div>
+<pre>
+img {
+    -webkit-box-reflect: below 10px;
+}
+</pre>
+</section>
+<section id="masking">
+<div class="reflect masking">
+<h3>Masking with gradients</h3>
+<img src="images/whats_liberal_about_the_liberal_arts.large.jpg">
+</div>
+<pre>
+img {
+	-webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(250, 250, 250, 0.1)));
+}
+</pre>
+<div class="reflect color-stop">
+<h3>Using color-stop</h3>
+<img src="images/everything_matters.large.jpg">
+</div>
+<pre>
+img {
+	-webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent) , to(rgba(250, 250, 250, 0.1)));
+}
+</pre>
+</section>
+<section id="firefox">
+	<div class="reflect moz">
+		<h3>Alternative way for Firefox</h3>
+		<p><em>View this demo in Firefox, otherwise the effect will not be delivered.</em></p>
+		<div id="moz-reflect">
+			<img src="images/strange_bedfellows.large.jpg">
+		</div>
+	</div>
+</section>
+</div>
+
+</body>
+</html>
